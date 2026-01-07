@@ -11,6 +11,9 @@ spec:
   resources:
     requests:
       storage: "{{ .Values.management.persistentVolume.size }}"
+  {{- if .Values.management.persistentVolume.volumeName }}
+  volumeName: "{{ .Values.management.persistentVolume.volumeName }}"
+  {{- end }}
   {{- if .Values.management.persistentVolume.storageClass }}
   storageClassName: "{{ .Values.management.persistentVolume.storageClass }}"
   {{- end }}

@@ -263,6 +263,10 @@ management:
     ##
     storageClass:
 
+    ## @param management.persistentVolume.volumeName
+    ##
+    volumeName:
+
     ## @param management.persistentVolume.size
     ##
     size: 100Mi
@@ -464,6 +468,10 @@ signal:
     ## @param signal.persistentVolume.storageClass
     ##
     storageClass:
+
+    ## @param signal.persistentVolume.volumeName
+    ##
+    volumeName:
 
     ## @param signal.persistentVolume.size
     ##
