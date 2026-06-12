@@ -48,6 +48,10 @@ stun:
   uri: stun:localhost:3478
 
 turn:
+  ## @param turn.enabled
+  ##
+  enabled: true
+
   ## @param turn.uri
   ##
   uri: turn:localhost:3478

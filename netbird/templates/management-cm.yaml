@@ -6,4 +6,4 @@ metadata:
     {{- include "netbird.management.labels" . | nindent 4 }}
 data:
   management.tmpl.json: |-
-    {{- .Files.Get "management.tmpl.json" | nindent 4 }}
+    {{- tpl (.Files.Get "management.tmpl.json") . | nindent 4 }}

@@ -49,6 +49,7 @@ spec:
               value: {{ .Values.signal.protocol }}
             - name: NETBIRD_STUN_URI
               value: {{ .Values.stun.uri }}
+            {{- if .Values.turn.enabled }}
             - name: NETBIRD_TURN_URI
               value: {{ .Values.turn.uri }}
             {{- with .Values.turn.user }}
@@ -61,6 +62,7 @@ spec:
                 secretKeyRef:
                   name: {{ .name }}
                   key: {{ .key }}
+            {{- end }}
             {{- end }}
             {{- if ne .Values.idp.managerType "none" }}
             - name: NETBIRD_AUTH_OIDC_CONFIGURATION_ENDPOINT

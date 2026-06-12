@@ -6,7 +6,7 @@
             "Username": "",
             "Password": null
         }
-    ],
+    ]{{- if .Values.turn.enabled }},
     "TURNConfig": {
         "Turns": [
             {
@@ -19,7 +19,7 @@
         "CredentialsTTL": "12h",
         "Secret": "secret",
         "TimeBasedCredentials": false
-    },
+    }{{- end }},
     "Relay": {
         "Addresses": ["${NETBIRD_RELAY_DOMAIN}:${NETBIRD_RELAY_PORT}"],
         "CredentialsTTL": "24h",
