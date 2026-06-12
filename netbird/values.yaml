@@ -480,6 +480,10 @@ signal:
 ## @section NetBird Relay
 
 relay:
+  ## @param relay.enabled
+  ##
+  enabled: true
+
   ## @param relay.logLevel
   ##
   logLevel: info

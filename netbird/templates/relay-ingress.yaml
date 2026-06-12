@@ -1,4 +1,4 @@
-{{- if .Values.relay.ingress.enabled -}}
+{{- if and .Values.relay.enabled .Values.relay.ingress.enabled -}}
 {{- $fullName := printf "%s-relay" (include "netbird.fullname" .) -}}
 {{- $svcPort := .Values.relay.service.port -}}
 {{- if and .Values.relay.ingress.className (not (semverCompare ">=1.18-0" .Capabilities.KubeVersion.GitVersion)) }}
